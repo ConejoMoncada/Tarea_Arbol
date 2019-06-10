@@ -51,7 +51,7 @@ public class Btree {
 
     public static DefaultMutableTreeNode insert(DefaultMutableTreeNode tn, int k){
         //este método busca el nodo e inserta en el lugar adecuado
-        if(tn == null){
+        if(tn == null || tn.getUserObject() instanceof String){
             //árbol vacío
             BNode b = new BNode(true);
             b.getKeys().add(k);
@@ -160,7 +160,7 @@ public class Btree {
     public static boolean search(DefaultMutableTreeNode tn, int k){
         if(tn == null)
             return false;
-        else{
+        else if (!(tn.getUserObject() instanceof String)){
             BNode b = (BNode)tn.getUserObject();
             int i = 0;
             while (i < b.getKeys().size() && k > b.getKeys().get(i)) {
@@ -178,5 +178,7 @@ public class Btree {
             else
                 return search((DefaultMutableTreeNode)tn.getChildAt(i),k);
         }
+        else 
+            return false;
     }
 }
