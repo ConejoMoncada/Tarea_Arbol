@@ -12,10 +12,13 @@ import java.util.ArrayList;
  * @author Dell
  */
 public class BNode {
-    private ArrayList <Integer> keys;
+
+    private ArrayList<Integer> keys;
     boolean leaf;
 
-    public BNode(boolean leaf){
+
+
+    public BNode(boolean leaf) {
         this.leaf = leaf;
         keys = new ArrayList();
     }
@@ -28,16 +31,16 @@ public class BNode {
         this.keys = keys;
     }
 
-    public boolean isLeaf(){
+    public boolean isLeaf() {
         return leaf;
     }
 
-    public void setLeaf(boolean leaf){
+    public void setLeaf(boolean leaf) {
         this.leaf = leaf;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         String k = "";
         for (int key : keys) {
             k += key + " ";
