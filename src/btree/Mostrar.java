@@ -33,7 +33,7 @@ public class Mostrar extends javax.swing.JFrame {
         Arbol = new javax.swing.JTree();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
         Arbol.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));

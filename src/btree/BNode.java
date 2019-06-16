@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class BNode {
 
     private ArrayList<Integer> keys;
-    boolean leaf;
+    private boolean leaf;
 
 
 
